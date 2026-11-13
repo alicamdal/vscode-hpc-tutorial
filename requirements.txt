@@ -1,0 +1,8 @@
+# Packages for the laptop demo (demo/vit_demo.py).
+# Tested on 2026-11-13 with: torch 2.15.0, transformers 5.23.0, pillow 13.0.0,
+# matplotlib 3.11.2, numpy 2.5.4 (Python 3.13).
+torch>=2.6
+transformers>=5.0,<6
+pillow>=10.0
+matplotlib>=3.8
+numpy>=1.26

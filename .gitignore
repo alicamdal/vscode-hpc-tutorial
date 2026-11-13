@@ -1,0 +1,14 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Demo results and HPC job logs
+outputs/
+gpu-check-*.out
+
+# Editors and systems
+.vscode/
+.DS_Store
+Thumbs.db
