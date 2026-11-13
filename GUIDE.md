@@ -451,8 +451,8 @@ versions. They are listed in a file called `requirements.txt`. Open it in VS Cod
 pip install -r requirements.txt
 ```
 
-pip says `Requirement already satisfied` for `torch` and `transformers` and installs the rest
-(`pillow`, `matplotlib`, `numpy`).
+pip says `Requirement already satisfied` for the packages you already have and installs the
+rest (for example `matplotlib`).
 
 > **Why did we install torch first?** On Ubuntu, `pip install -r requirements.txt` alone would pick
 > the large GPU version of torch. Installing the right version first avoids that.
