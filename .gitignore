@@ -22,3 +22,4 @@ guide/*.fdb_latexmk
 guide/*.synctex.gz
 guide/build.log
 guide/guide.pdf
+guide/*.listing
