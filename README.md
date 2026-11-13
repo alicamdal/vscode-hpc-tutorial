@@ -2,11 +2,11 @@
 
 Tutorial material for **GenAI Models and Robotic Applications (2026-1B)**, University of Twente.
 
-**Start here: [GUIDE.md](GUIDE.md)**, the step-by-step guide for Windows and Ubuntu.
+**Start here: [GUIDE.pdf](GUIDE.pdf)**, the step-by-step guide for Windows and Ubuntu, with screenshots.
 
 ## What you will do
 
-1. Install VS Code, Git, Python, and eduVPN.
+1. Install VS Code, Git, Python (and on Windows the Visual C++ Redistributable), and eduVPN.
 2. Connect VS Code to the UT HPC cluster over SSH.
 3. Clone this repository, create a virtual environment, and install PyTorch on the cluster.
 4. Submit a small GPU job that prints the PyTorch version, the GPU name, and its memory.
@@ -18,14 +18,15 @@ Tutorial material for **GenAI Models and Robotic Applications (2026-1B)**, Unive
 
 ```
 vscode-hpc-tutorial/
-├── GUIDE.md               step-by-step guide
+├── GUIDE.pdf              step-by-step guide (source in guide/)
 ├── requirements.txt       packages for the laptop demo
 ├── hpc/
 │   ├── check_gpu.py       prints machine, PyTorch, GPU name, VRAM, and a speed test
 │   └── check_gpu.sbatch   Slurm job script (one GPU, at most 5 minutes)
-└── demo/
-    ├── vit_demo.py        the Vision Transformer demo
-    └── images/            sample images (see CREDITS.md)
+├── demo/
+│   ├── vit_demo.py        the Vision Transformer demo
+│   └── images/            sample images (see CREDITS.md)
+└── guide/                 LaTeX source and screenshots of GUIDE.pdf
 ```
 
 ## Quick start (if you already know the tools)
@@ -45,7 +46,7 @@ On your laptop:
 ```bash
 git clone https://github.com/alicamdal/vscode-hpc-tutorial.git
 cd vscode-hpc-tutorial
-python3 -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\Activate.ps1
+python3 -m venv .venv && source .venv/bin/activate    # Windows: py -3.13 -m venv .venv; .venv\Scripts\Activate.ps1
 pip install torch --index-url https://download.pytorch.org/whl/cpu   # Windows: pip install torch
 pip install -r requirements.txt
 python demo/vit_demo.py
