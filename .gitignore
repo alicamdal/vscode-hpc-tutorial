@@ -12,3 +12,13 @@ gpu-check-*.out
 .vscode/
 .DS_Store
 Thumbs.db
+
+# LaTeX build files (guide)
+guide/*.aux
+guide/*.log
+guide/*.out
+guide/*.fls
+guide/*.fdb_latexmk
+guide/*.synctex.gz
+guide/build.log
+guide/guide.pdf
