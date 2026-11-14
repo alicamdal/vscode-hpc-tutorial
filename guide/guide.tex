@@ -497,14 +497,14 @@ Tell VS Code to use this environment too: press \key{Ctrl+Shift+P}, type \menu{P
 \begin{checkbox}The prompt starts with \texttt{(.venv)}.\end{checkbox}
 
 \subsection{Install packages one by one}
-First PyTorch. Laptops usually have no NVIDIA GPU, so we install the smaller CPU version.
+First PyTorch. We install the CPU version of PyTorch. It is a much smaller download, so the installation is quick, and our small model runs fast on a CPU. Because it goes into the virtual environment, the Python installation of your laptop does not change.
 \begin{wincmd}
 pip install torch
 \end{wincmd}
 \begin{ubucmd}
 pip install torch --index-url https://download.pytorch.org/whl/cpu
 \end{ubucmd}
-On Ubuntu, without the extra address pip downloads the large GPU version. Then the Hugging Face library that downloads and runs the model:
+On Windows, pip installs the CPU version by default. On Ubuntu, without the extra address pip downloads the much larger GPU version. Then the Hugging Face library that downloads and runs the model:
 \begin{cmd}
 pip install transformers
 \end{cmd}
@@ -517,7 +517,7 @@ pip install -r requirements.txt
 \end{cmd}
 pip says \texttt{Requirement already satisfied} for the packages you already have and installs the rest (for example \texttt{matplotlib}).
 \begin{notebox}[Why did we install torch first?]
-On Ubuntu, \code{pip install -r requirements.txt} alone would pick the large GPU version of torch. Installing the right version first avoids that.
+On Ubuntu, \code{pip install -r requirements.txt} alone would pick the large GPU version of torch. Installing the CPU version first keeps the download small.
 \end{notebox}
 
 \subsection{Run the demo}
